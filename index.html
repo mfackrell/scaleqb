@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>ScaleQB | Stop the ERP Panic</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    fontFamily: {
+      sans: ['Inter','sans-serif'],
+      mono: ['JetBrains Mono','monospace'],
+    },
+    extend: {
+      colors: {
+        brand: {
+          dark: '#0F172A',
+          accent: '#2563EB',
+        }
+      }
+    }
+  }
+}
+</script>
+
+</head>
+<body class="bg-white text-brand-dark antialiased selection:bg-brand-accent selection:text-white">
+
+<!-- NAV -->
+<nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-slate-200 z-50">
+  <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <div class="w-9 h-9 bg-brand-dark text-white flex items-center justify-center font-bold rounded">S</div>
+      <span class="font-bold tracking-tight text-lg">ScaleQB</span>
+    </div>
+    <a href="#cta" class="bg-brand-accent text-white px-6 py-3 rounded-lg text-sm font-bold hover:bg-blue-700 transition-all shadow-md">
+      Book Feasibility Call
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="pt-36 pb-24 px-6 bg-slate-50 border-b border-slate-200">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="inline-flex items-center gap-2 bg-amber-100 border border-amber-200 text-amber-800 px-4 py-1.5 rounded-full mb-10">
+      <span class="text-xs font-bold tracking-wide uppercase">Before you sign that NetSuite contract…</span>
+    </div>
+
+    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.05] mb-6">
+      Stop the <span class="text-brand-accent">ERP Panic.</span><br>
+      Get the Truth Before You Burn $150K.
+    </h1>
+
+    <p class="text-xl text-slate-600 max-w-3xl mb-10 leading-relaxed">
+      Most CEOs get pushed into ERPs out of chaos, fear, or bad advice. The problem isn’t QuickBooks—it’s how your data is structured.
+      We analyze your current stack, redesign how work and data flow through it, and give you real‑time profit visibility
+      <span class="font-bold text-slate-900">without the 12‑month distraction and six‑figure cost.</span>
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+      <a href="#cta" class="bg-brand-accent text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/25">
+        Book the Feasibility Call
+      </a>
+      <a href="#comparison" class="px-8 py-4 border border-slate-300 rounded-xl text-slate-600 font-medium hover:bg-white transition-all">
+        See How ScaleQB Compares to ERP
+      </a>
+    </div>
+
+    <div class="flex flex-col sm:flex-row sm:items-center gap-3 mt-2">
+      <div class="text-sm font-mono text-slate-500">Trusted by CEOs &amp; founders at:</div>
+      <div class="flex flex-wrap gap-2">
+        <div class="px-3 py-1.5 rounded-full border border-slate-200 bg-white text-[11px] font-semibold text-slate-500 shadow-sm">
+          DTC · $18M
+        </div>
+        <div class="px-3 py-1.5 rounded-full border border-slate-200 bg-white text-[11px] font-semibold text-slate-500 shadow-sm">
+          Manufacturing · $12.5M
+        </div>
+        <div class="px-3 py-1.5 rounded-full border border-slate-200 bg-white text-[11px] font-semibold text-slate-500 shadow-sm">
+          SaaS · $9M
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section id="who" class="py-20 bg-white border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
+    <div>
+      <h2 class="text-3xl font-bold mb-4">Who ScaleQB is built for</h2>
+      <p class="text-slate-600 mb-4">
+        You don’t need another generic “systems integrator.” ScaleQB is for companies in <span class="font-semibold text-slate-900">the messy middle</span>—big enough that finance is complex, but not so big that an ERP is the obvious choice.
+      </p>
+      <ul class="space-y-3 text-sm text-slate-700">
+        <li class="flex gap-2">
+          <span class="mt-[6px] h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+          <span>Revenue between <span class="font-semibold">$2M and $30M</span>, with more SKUs, projects, entities, or locations than your original QuickBooks setup expected.</span>
+        </li>
+        <li class="flex gap-2">
+          <span class="mt-[6px] h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+          <span>
+            You don’t see last month’s numbers until you’re halfway through this month—making it impossible to make real‑time decisions on pricing, hiring, or inventory.
+          </span>
+        </li>
+        <li class="flex gap-2">
+          <span class="mt-[6px] h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+          <span>
+            You can’t easily see profit by product, location, or channel—just a generic bottom line that hides what’s actually working.
+          </span>
+        </li>
+        <li class="flex gap-2">
+          <span class="mt-[6px] h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+          <span>
+            You’re being told “you’ve outgrown QuickBooks,” but your instinct says the real issues are process, structure, and handoffs.
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+      <h3 class="text-sm font-bold text-slate-800 mb-3 uppercase tracking-wide">Not a fit if…</h3>
+      <ul class="space-y-3 text-sm text-slate-700">
+        <li>• You’re pre‑revenue or sub‑$2M and still proving your business model.</li>
+        <li>• You’re already deep into an ERP implementation and just need rescue consulting.</li>
+        <li>• You’re looking for basic bookkeeping, not systems and workflow architecture.</li>
+        <li>• You want a shiny new tech stack more than you want reliable numbers.</li>
+      </ul>
+      <p class="mt-4 text-xs text-slate-500">
+        If you’re not sure where you fall, the feasibility call will make it obvious in 30–45 minutes.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section id="comparison" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-3">The Hard Truth</h2>
+    <p class="text-sm text-slate-600 text-center max-w-2xl mx-auto mb-16">
+      Most ERPs are sold because month‑end hurts and reporting is messy—not because you’ve truly outgrown QuickBooks.
+      Here’s the difference in cost and disruption between “buy bigger software” and “fix your architecture first.”
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+
+      <div class="p-8 bg-white border border-slate-200 rounded-xl shadow-sm">
+        <h3 class="font-bold text-xl mb-5 flex items-center gap-3">
+          <span class="w-10 h-10 bg-red-100 text-red-600 rounded-full flex items-center justify-center">✕</span>
+          <span>The ERP Route</span>
+        </h3>
+        <ul class="space-y-4 text-sm">
+          <li class="flex justify-between border-b border-slate-100 pb-2">
+            <span class="text-slate-500">First Year Cost</span>
+            <span class="font-bold text-red-600 font-mono">$150K – $500K</span>
+          </li>
+          <li class="flex justify-between border-b border-slate-100 pb-2">
+            <span class="text-slate-500">Time to Value</span>
+            <span class="font-bold font-mono">6–18 Months</span>
+          </li>
+          <li class="flex justify-between border-b border-slate-100 pb-2">
+            <span class="text-slate-500">Team Impact</span>
+            <span class="font-bold">Operational Chaos</span>
+          </li>
+          <li class="flex justify-between">
+            <span class="text-slate-500">Strategic Clarity</span>
+            <span class="font-bold">Complex reports that require a consultant to change</span>
+          </li>
+        </ul>
+        <p class="mt-4 text-[11px] text-slate-500">
+          ERP projects often burn out key staff and lock you into a vendor.
+        </p>
+      </div>
+
+      <div class="p-8 bg-white border-2 border-brand-accent rounded-xl shadow-xl relative">
+        <div class="absolute top-0 right-0 bg-brand-accent text-white text-xs font-bold px-3 py-1 rounded-bl">
+          CEO PREFERRED
+        </div>
+        <h3 class="font-bold text-xl mb-5 flex items-center gap-3">
+          <span class="w-10 h-10 bg-blue-100 text-brand-accent rounded-full flex items-center justify-center">✓</span>
+          <span>The ScaleQB Route</span>
+        </h3>
+        <ul class="space-y-4 text-sm">
+          <li class="flex justify-between border-b border-slate-100 pb-2">
+            <span class="text-slate-500">Project Cost</span>
+            <span class="font-bold text-emerald-600 font-mono">$25K – $45K</span>
+          </li>
+          <li class="flex justify-between border-b border-slate-100 pb-2">
+            <span class="text-slate-500">Time to Value</span>
+            <span class="font-bold font-mono">6–8 Weeks</span>
+          </li>
+          <li class="flex justify-between border-b border-slate-100 pb-2">
+            <span class="text-slate-500">Team Impact</span>
+            <span class="font-bold">Low — We Do the Lifting</span>
+          </li>
+          <li class="flex justify-between">
+            <span class="text-slate-500">Strategic Clarity</span>
+            <span class="font-bold">Real‑time visibility into cash &amp; unit economics</span>
+          </li>
+        </ul>
+        <p class="mt-4 text-[11px] text-slate-500 text-right">
+          Fixed‑scope, one‑time engagement. No ongoing license lock‑in.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="#cta" class="bg-brand-accent text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-md">
+        Get the Architecture Audit
+      </a>
+      <p class="text-xs text-slate-400 mt-3">Only accepting 6 companies this quarter</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- NARRATIVE STORY BLOCK -->
+<section class="py-10 bg-white border-t border-slate-100">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="bg-slate-50 border border-slate-200 rounded-2xl px-6 py-5">
+      <p class="text-sm text-slate-800 leading-relaxed">
+        Every CEO thinks they have a software problem.<br>
+        What they really have is a visibility problem.<br>
+        The reporting is late, decisions are blind, and finance is drowning.<br>
+        So they panic‑buy an ERP — and end up worse.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO / PROCESS -->
+<section id="process" class="py-20 bg-slate-50 border-y border-slate-200">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold mb-3">What a ScaleQB project actually looks like</h2>
+      <p class="text-sm text-slate-600 max-w-2xl mx-auto">
+        Think of this as a focused audit and rebuild of your finance engine. We find where decisions are running on bad or late data, then design a system that gives you clarity without hiring three more accountants or buying an ERP.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 text-sm">
+      <!-- Step 1 -->
+      <div class="bg-white border border-slate-200 rounded-xl p-6 flex flex-col h-full">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="h-8 w-8 rounded-full bg-slate-100 flex items-center justify-center text-[11px] font-mono text-slate-500">
+            01
+          </div>
+          <h3 class="font-bold text-slate-900">The Audit: where the data breaks</h3>
+        </div>
+        <p class="text-slate-600 mb-3">
+          1–2 weeks. We trace how numbers move from the field to your P&amp;L and board deck.
+        </p>
+        <ul class="text-slate-500 space-y-1.5 text-xs">
+          <li>• Where data gets delayed, duplicated, or “fixed in Excel”</li>
+          <li>• Which reports you actually rely on to make decisions</li>
+          <li>• Where you’re blind on margin by product, customer, or channel</li>
+        </ul>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="bg-white border border-slate-200 rounded-xl p-6 flex flex-col h-full">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="h-8 w-8 rounded-full bg-slate-100 flex items-center justify-center text-[11px] font-mono text-slate-500">
+            02
+          </div>
+          <h3 class="font-bold text-slate-900">The Blueprint: a system that actually scales</h3>
+        </div>
+        <p class="text-slate-600 mb-3">
+          3–4 weeks. We design how your finance system should work for the next few stages of growth.
+        </p>
+        <ul class="text-slate-500 space-y-1.5 text-xs">
+          <li>• A data model that shows profit by unit, location, and channel</li>
+          <li>• Clear roles and handoffs so work doesn’t bottleneck on one person</li>
+          <li>• Rules and controls that prevent “fire drill” closes</li>
+        </ul>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="bg-white border border-slate-200 rounded-xl p-6 flex flex-col h-full">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="h-8 w-8 rounded-full bg-slate-100 flex items-center justify-center text-[11px] font-mono text-slate-500">
+            03
+          </div>
+          <h3 class="font-bold text-slate-900">The Execution: dashboards & decisions</h3>
+        </div>
+        <p class="text-slate-600 mb-3">
+          2–3 weeks. We implement changes in your existing stack and make the new system usable.
+        </p>
+        <ul class="text-slate-500 space-y-1.5 text-xs">
+          <li>• Changes implemented in QuickBooks and connected tools</li>
+          <li>• Light‑weight automations where they clearly reduce manual work</li>
+          <li>• A CEO‑friendly dashboard &amp; playbook you can run without us</li>
+        </ul>
+
+        <!-- Visual proof: sample dashboard -->
+        <div class="mt-4 bg-slate-50 border border-slate-200 rounded-lg p-3">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-[11px] font-mono text-slate-500 uppercase tracking-[0.18em]">
+              CEO VIEW · SAMPLE
+            </span>
+            <span class="text-[11px] text-emerald-600 font-mono">Live</span>
+          </div>
+          <div class="grid grid-cols-2 gap-3 text-[11px] text-slate-600">
+            <div>
+              <div class="text-slate-400 mb-1">Gross Margin by Channel</div>
+              <div class="h-16 rounded bg-gradient-to-r from-emerald-200 to-emerald-500 opacity-80"></div>
+            </div>
+            <div>
+              <div class="text-slate-400 mb-1">Cash Runway</div>
+              <div class="h-16 rounded bg-gradient-to-r from-sky-200 to-sky-500 opacity-80"></div>
+            </div>
+          </div>
+          <p class="mt-2 text-[11px] text-slate-500">
+            One place where you can see margin by product, channel, and location without exporting to Excel.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE RESULTS -->
+<section class="py-24 bg-white border-t border-slate-200">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <h2 class="text-4xl font-bold text-center mb-4 tracking-tight">Real Outcomes. No Hype.</h2>
+    <p class="text-center text-slate-500 text-sm max-w-xl mx-auto mb-14">
+      Architecture first. Software second. Here’s what happens when CEOs rethink the ERP reflex.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Card 1 -->
+      <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 bg-brand-accent/10 text-brand-accent rounded-full flex items-center justify-center">
+            <i data-lucide="factory" class="w-5 h-5"></i>
+          </div>
+          <div class="font-bold text-slate-900 text-lg leading-tight">Health Supplement Manufacturer</div>
+        </div>
+
+        <p class="text-xs font-mono text-slate-500 mb-5">Detroit, Michigan · ~$10M · Manufacturer</p>
+
+        <p class="text-sm text-slate-700 mb-5">
+          Implemented NetSuite with significant implementation and annual costs. Discovered the core issue was workflow—not software.
+          Now migrating back to QuickBooks with a custom architecture that restores clarity and efficiency.
+        </p>
+
+        <div class="bg-white border border-slate-200 rounded-xl p-4 text-center">
+          <div class="text-[11px] font-mono text-slate-500 tracking-widest mb-1">PROJECT IMPACT</div>
+          <div class="text-2xl font-bold text-emerald-600">$100K+ Savings</div>
+          <div class="text-[11px] text-slate-500 mt-1">Eliminated unnecessary platform overhead</div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 bg-brand-accent/10 text-brand-accent rounded-full flex items-center justify-center">
+            <i data-lucide="school" class="w-5 h-5"></i>
+          </div>
+          <div class="font-bold text-slate-900 text-lg leading-tight">Education Tech & Ecommerce</div>
+        </div>
+
+        <p class="text-xs font-mono text-slate-500 mb-5">Oroland, Florida · $90M Service/Products Businses</p>
+
+        <p class="text-sm text-slate-700 mb-5">
+          CEO considered moving to a new ERP. Strategic assessment proved existing stack was capable with structural redesign.
+          Prevented an unnecessary ERP migration and enabled scalable real-time reporting.
+        </p>
+
+        <div class="bg-white border border-slate-200 rounded-xl p-4 text-center">
+          <div class="text-[11px] font-mono text-slate-500 tracking-widest mb-1">PROJECT IMPACT</div>
+          <div class="text-2xl font-bold text-emerald-600">$100K+ Avoided Spend</div>
+          <div class="text-[11px] text-slate-500 mt-1">Plus $20K-$30K annual savings</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- CTA -->
+<section id="cta" class="py-28 bg-slate-50 border-t border-slate-200">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+
+    <h2 class="text-4xl font-bold mb-6">Book the Feasibility Call</h2>
+    <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-10">
+      No pitch. No pressure. Just a clear view of whether an ERP is the smart next move—or an expensive detour.
+    </p>
+
+    <form
+      class="bg-white p-10 rounded-2xl border border-slate-200 shadow-xl max-w-lg mx-auto space-y-5"
+      onsubmit="event.preventDefault(); const btn=this.querySelector('button[type=submit]'); btn.innerText='Request Received'; btn.classList.remove('bg-brand-accent','hover:bg-blue-700'); btn.classList.add('bg-emerald-600');"
+    >
+      <div class="flex flex-col gap-3">
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Work Email"
+          class="w-full p-4 border border-slate-300 rounded-md text-sm focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent"
+        />
+        <input
+          name="company"
+          required
+          placeholder="Company Name"
+          class="w-full p-4 border border-slate-300 rounded-md text-sm focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent"
+        />
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <select
+          name="revenue"
+          class="w-full p-4 border border-slate-300 rounded-md text-sm bg-white focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent"
+        >
+          <option value="">Revenue Range</option>
+          <option>$2M – $5M</option>
+          <option>$5M – $15M</option>
+          <option>$15M – $30M</option>
+          <option>$30M+</option>
+        </select>
+        <select
+          name="stack"
+          class="w-full p-4 border border-slate-300 rounded-md text-sm bg-white focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent"
+        >
+          <option value="">Current Core System</option>
+          <option>QuickBooks Online</option>
+          <option>QuickBooks Desktop</option>
+          <option>Xero</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <select
+        name="primary_issue"
+        class="w-full p-4 border border-slate-300 rounded-md text-sm bg-white focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent"
+      >
+        <option value="">Biggest issue right now</option>
+        <option>I don’t fully trust our numbers</option>
+        <option>We are about to sign an ERP contract</option>
+        <option>Finance team is drowning in manual work</option>
+        <option>I need clearer reporting for board / investors</option>
+      </select>
+
+      <textarea
+        name="notes"
+        rows="2"
+        placeholder="Anything else we should know? (optional)"
+        class="w-full p-4 border border-slate-300 rounded-md text-sm focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent"
+      ></textarea>
+
+      <p class="text-[11px] text-slate-500">
+        We don’t sell software licenses. We fix the machine you already own.
+      </p>
+
+      <button
+        type="submit"
+        class="w-full bg-brand-accent text-white font-bold text-lg py-4 rounded-md hover:bg-blue-700 transition-all"
+      >
+        Request Feasibility Call
+      </button>
+      <p class="text-xs text-slate-400">Response within 24 hours. No ERP sales pitch.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="bg-white py-12 border-t border-slate-200">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+    <span class="font-bold">ScaleQB</span>
+    <span class="text-xs text-slate-400">&copy; 2025 | Architecture First. Software Second.</span>
+  </div>
+</footer>
+
+</body>
+</html>
