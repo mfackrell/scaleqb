@@ -5,6 +5,9 @@
 <title>ScaleQB | Stop the ERP Panic</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+<!-- Added Lucide script for icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
@@ -384,8 +387,6 @@ tailwind.config = {
   </div>
 </section>
 
-
-
 <!-- CTA -->
 <section id="cta" class="py-28 bg-slate-50 border-t border-slate-200">
   <div class="max-w-5xl mx-auto px-6 text-center">
@@ -395,9 +396,10 @@ tailwind.config = {
       No pitch. No pressure. Just a clear view of whether an ERP is the smart next move—or an expensive detour.
     </p>
 
+    <!-- FORM START: Added ID, removed inline JS -->
     <form
+      id="contact-form"
       class="bg-white p-10 rounded-2xl border border-slate-200 shadow-xl max-w-lg mx-auto space-y-5"
-      onsubmit="event.preventDefault(); const btn=this.querySelector('button[type=submit]'); btn.innerText='Request Received'; btn.classList.remove('bg-brand-accent','hover:bg-blue-700'); btn.classList.add('bg-emerald-600');"
     >
       <div class="flex flex-col gap-3">
         <input
@@ -460,13 +462,16 @@ tailwind.config = {
         We don’t sell software licenses. We fix the machine you already own.
       </p>
 
+      <!-- BUTTON: Added ID -->
       <button
+        id="submit-btn"
         type="submit"
         class="w-full bg-brand-accent text-white font-bold text-lg py-4 rounded-md hover:bg-blue-700 transition-all"
       >
         Request Feasibility Call
       </button>
-      <p class="text-xs text-slate-400">Response within 24 hours. No ERP sales pitch.</p>
+      <!-- STATUS TEXT: Added ID -->
+      <p id="form-status" class="text-xs text-slate-400">Response within 24 hours. No ERP sales pitch.</p>
     </form>
   </div>
 </section>
@@ -477,6 +482,55 @@ tailwind.config = {
     <span class="text-xs text-slate-400">&copy; 2025 | Architecture First. Software Second.</span>
   </div>
 </footer>
+
+<!-- NEW SCRIPT for API call + Icons -->
+<script>
+    const form = document.getElementById("contact-form");
+    const button = document.getElementById("submit-btn");
+    const statusText = document.getElementById("form-status");
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+
+        // Collect data as JSON
+        const formData = new FormData(event.target);
+        const data = Object.fromEntries(formData.entries());
+
+        button.disabled = true;
+        button.innerText = "Sending...";
+
+        try {
+            // Send to Vercel API
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                button.innerText = "Request Received";
+                button.classList.remove("bg-brand-accent", "hover:bg-blue-700");
+                button.classList.add("bg-emerald-600");
+                statusText.innerText = "Thanks! We'll be in touch shortly.";
+                form.reset();
+            } else {
+                const errorData = await response.json();
+                throw new Error(errorData.message || "Submission failed");
+            }
+        } catch (error) {
+            button.innerText = "Error. Try again.";
+            button.disabled = false;
+            statusText.innerText = "Something went wrong. Please email us directly.";
+            console.error("Form Error:", error);
+        }
+    }
+
+    form.addEventListener("submit", handleSubmit);
+    // Initializes the icons since the script in head is now present
+    lucide.createIcons();
+</script>
 
 </body>
 </html>
