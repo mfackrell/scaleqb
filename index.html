@@ -499,7 +499,16 @@ tailwind.config = {
         button.innerText = "Requesting...";
 
         try {
-            await new Promise(r => setTimeout(r, 1000));
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            });
+            
+            if (!response.ok) {
+                throw new Error("Submission failed");
+            }
+
             button.innerText = "Request Received";
             button.classList.remove("bg-brand-accent", "hover:bg-blue-700");
             button.classList.add("bg-emerald-600");
